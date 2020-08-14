@@ -8,10 +8,11 @@ import { Product } from './product.model';
 })
 export class AppComponent {
   title = 'inventory-app';
+  product: Product;
 
   constructor() {
     //Inventory Logic
-    let newProduct = new Product(
+    this.product= new Product(
       "NICEHAT", //SKU
       "A Nice Black Hat", //Name
       "/assets/images/products/a_nice_black_hat.png", //image URL
