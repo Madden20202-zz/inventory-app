@@ -8,16 +8,32 @@ import { Product } from './product.model';
 })
 export class AppComponent {
   title = 'inventory-app';
-  product: Product;
+  products: Product[];
 
   constructor() {
     //Inventory Logic
-    this.product= new Product(
-      "NICEHAT", //SKU
-      "A Nice Black Hat", //Name
-      "/assets/images/products/a_nice_black_hat.png", //image URL
-      ["Men's", "Accessories", "Hats"], //Department
-      29.99 //Price
-    );
+    this.products = [
+      new Product(
+        "BKSHOES", //sku
+        "Black Running Shoes", //name
+        "/assets/images/products/black-shoes.jpg", //image URL
+        ["Men's", "Shoes", "Running"], //department
+        135.99 //price
+      ),
+      new Product(
+        "BLUEJACKET", //sku
+        "Blue Jacket", //name
+        "/assets/images/products/blue-jacket.jpg", //image URL
+        ["Women", "Apparel", "Jackets & Vests"], //department
+        235.99 //price
+      ),
+      new Product(
+        'NICEHAT', //sku
+        'A Nice Black Hat', //name
+        '/assets/images/products/black-hat.jpg', //image URL
+        ['Men', 'Accessories', 'Hats'], //department
+        29.99 //price
+      )
+    ];
   }
 }
