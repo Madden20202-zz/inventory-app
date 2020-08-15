@@ -1,10 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-image',
-  templateUrl: `
-  <img class="product-image" src="{{ product.imageUrl }}">
-  `
+  templateUrl: './product-image.component.html',
 })
 export class ProductImageComponent implements OnInit {
 
