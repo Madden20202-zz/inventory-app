@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, HostBinding } from '@angular/core';
+import { Product } from '../product.model';
 
 @Component({
   selector: 'app-product-image',
@@ -6,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductImageComponent implements OnInit {
 
-  @Input() price: number;
+  @Input() product: Product;
+  @HostBinding('attr.class') cssClass = 'ui small image';
 
   constructor() { }
 

@@ -3,7 +3,7 @@ import { Product } from '../product.model';
 
 @Component({
   selector: 'app-price-display',
-  templateUrl: `
+  template: `
   <div class="price-display">\${{ price }}</div>
   `
 })
