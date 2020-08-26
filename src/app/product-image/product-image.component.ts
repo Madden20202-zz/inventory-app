@@ -1,18 +1,15 @@
-import { Component, Input, OnInit, HostBinding } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { Product } from '../product.model';
 
 @Component({
   selector: 'app-product-image',
-  templateUrl: './product-image.component.html',
+  template: `
+  <img class="product-image" [src]="product.imageUrl">
+`
 })
-export class ProductImageComponent implements OnInit {
+export class ProductImageComponent {
 
   @Input() product: Product;
   @HostBinding('attr.class') cssClass = 'ui small image';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

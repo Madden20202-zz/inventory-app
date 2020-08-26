@@ -18,7 +18,8 @@ import { PriceDisplayComponent } from './price-display/price-display.component';
     PriceDisplayComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

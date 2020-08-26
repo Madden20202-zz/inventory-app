@@ -1,6 +1,5 @@
 import { 
-  Component, 
-  OnInit,
+  Component,
   EventEmitter,
   Input,
   Output 
@@ -13,7 +12,7 @@ import { Product } from '../product.model';
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.css']
 })
-export class ProductsListComponent implements OnInit {
+export class ProductsListComponent {
 
   //Product is passed down to here
   @Input() productList: Product[];
@@ -40,8 +39,4 @@ export class ProductsListComponent implements OnInit {
      } 
      return product.sku == this.currentProduct.sku;
    }
-
-  ngOnInit(): void {
-  }
-
 }
